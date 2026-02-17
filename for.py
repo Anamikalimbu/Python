@@ -3,9 +3,6 @@
 
 #Write a program that uses a for loop and the range() function to print the numbers from 1 to 10.
 
-from unicodedata import name
-
-
 for i in range(1,11):
     print(i)
     
@@ -25,4 +22,5 @@ print("Multiplication table for", number)
 for i in range(1,11):
     p=number*i  
     print(f"{number} x {i} = {p}")
+
     

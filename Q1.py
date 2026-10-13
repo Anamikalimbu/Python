@@ -23,7 +23,7 @@ from functools import lru_cache
 from itertools import combinations, permutations
 
 
-# ───────────────────────── 1. MATH ─────────────────────────
+# MATH 
 def is_prime(n: int) -> bool:
     if n < 2:
         return False
@@ -93,7 +93,7 @@ def to_base(n: int, base: int) -> str:
     return "".join(reversed(out))
 
 
-# ───────────────────────── 2. STRINGS ─────────────────────────
+# STRINGS 
 def is_palindrome(s: str) -> bool:
     t = "".join(c.lower() for c in s if c.isalnum())
     return t == t[::-1]
@@ -130,7 +130,7 @@ def balanced_brackets(s: str) -> bool:
     return not stack
 
 
-# ───────────────────── 3. SEARCH & SORT ─────────────────────
+#  SEARCH & SORT 
 def binary_search(arr: list, target) -> int:
     """Returns index or -1. arr must be sorted."""
     lo, hi = 0, len(arr) - 1
@@ -178,7 +178,7 @@ def max_subarray(nums: list) -> int:
     return best
 
 
-# ───────────────────── 4. DYNAMIC PROGRAMMING ─────────────────────
+# DYNAMIC PROGRAMMING 
 def lcs(a: str, b: str) -> int:
     """Longest common subsequence length."""
     dp = [[0] * (len(b) + 1) for _ in range(len(a) + 1)]
@@ -220,7 +220,7 @@ def coin_change(coins: list, amount: int) -> int:
     return -1 if dp[amount] == math.inf else dp[amount]
 
 
-# ───────────────────────── 5. GRAPHS ─────────────────────────
+# GRAPHS 
 def bfs(graph: dict, start) -> list:
     seen, order, q = {start}, [], deque([start])
     while q:
@@ -263,7 +263,7 @@ def dijkstra(graph: dict, start) -> dict:
     return dist
 
 
-# ───────────────────────── 6. DATA HELPERS ─────────────────────────
+# DATA HELPERS 
 def read_ints(prompt: str = "") -> list:
     return list(map(int, input(prompt).split()))
 
@@ -287,7 +287,7 @@ def all_permutations(items: list) -> list:
     return [list(p) for p in permutations(items)]
 
 
-# ───────────────────────── 7. MENU ─────────────────────────
+# MENU 
 def menu():
     options = {
         "1": ("Is prime?", lambda: print(is_prime(int(input("n: "))))),
@@ -327,7 +327,7 @@ def menu():
             print("Invalid choice.")
 
 
-# ───────────────── 8. TEMPLATE FOR A NEW PROBLEM ─────────────────
+# TEMPLATE FOR A NEW PROBLEM 
 def solve():
     """
     Steps for ANY new problem:
@@ -336,9 +336,7 @@ def solve():
     Edit the body below; option 19 in the menu runs it.
     """
     data = read_ints("Enter numbers separated by spaces: ")
-    # --- your logic here ---
     result = sum(data)
-    # -----------------------
     print("Answer:", result)
 
 

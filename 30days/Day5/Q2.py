@@ -17,3 +17,11 @@ while n > 0:
     n //= 10
     count += 1
 print("The number of digits in the number is:", count)
+
+# Take two numbers and print quotient, remainder, and power.
+a = int(input("Enter the first number: "))
+b = int(input("Enter the second number: "))
+print("Quotient:", a // b)
+print("Remainder:", a % b)
+print("Power:", a ** b)
+

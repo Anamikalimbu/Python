@@ -30,3 +30,15 @@ def second_largest_with_sort(numbers):
 # Example usage:
 numbers = [3, 5, 1, 4, 2]
 print(second_largest_with_sort(numbers))
+
+
+
+#Remove duplicates from a list
+def remove_duplicates(numbers):
+    return list(set(numbers))
+
+# Example usage:
+numbers = [1, 2, 2, 3, 4, 4, 5]
+print(remove_duplicates(numbers))
+
+#

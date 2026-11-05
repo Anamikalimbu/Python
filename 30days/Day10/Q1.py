@@ -41,4 +41,14 @@ def remove_duplicates(numbers):
 numbers = [1, 2, 2, 3, 4, 4, 5]
 print(remove_duplicates(numbers))
 
-#
+#Rotate a list by k positions.
+def rotate_list(numbers, k):
+    if not numbers:
+        return numbers  # Return empty list if input is empty
+
+    k = k % len(numbers)  # Handle cases where k is greater than the length of the list
+    return numbers[-k:] + numbers[:-k]
+# Example usage:
+numbers = [1, 2, 3, 4, 5]
+k = 2
+print(rotate_list(numbers, k))

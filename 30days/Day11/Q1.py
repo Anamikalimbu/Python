@@ -14,4 +14,14 @@ if result:
     print(f"Pair found at indices: {result}")
 else:
     print("No pair found.")
-    
+
+#Find the missing number in a list containing 1..n
+def find_missing_number(numbers):
+    n = len(numbers) + 1  # Since one number is missing, the total count should be n
+    expected_sum = n * (n + 1) // 2  # Sum of first n natural numbers
+    actual_sum = sum(numbers)
+    return expected_sum - actual_sum
+
+# Example usage:
+numbers = [1, 2, 4, 5, 6]
+print(find_missing_number(numbers))
